@@ -2,11 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First App</title>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .div1{
+            width: 100%; /* Adjust as needed */
+            margin: 20px auto; /* This is the key to center the div horizontally */
+            text-align: center; /* Center align the content inside the div */
+        }
+        a, button{
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 3px;
+            border: none;
+            font-size: 14px;
+        }
+    </style>
+    <!-- Include Google Fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Welcome</h1>
+    <div class="div1">
+        <h1>Home</h1>
+        <p>Welcome to the home page!</p>
 
-{{time}}
+        <h1>Password Generator</h1>
+        <p>In today's digital world, having strong and secure passwords is essential to protect your online accounts from unauthorized access.<br>
+        One effective way to generate secure passwords is by using Python. Python offers powerful libraries and functions that can help in creating random and strong passwords. Let's take a look at a simple Python function that generates random passwords<br>
+        </p>
+        <a href="{% url 'password_generator_form' %}">Password Generator</a>
+    </div>
+
+    <div class="div1">
+        <h1>Weather App</h1>
+        <p>Weather App is a simple web application that allows users to check the weather forecast for a specific location. The app uses the OpenWeatherMap API to retrieve weather data and display it to the user. Users can enter the name of a city or town and the app will return the current weather conditions, temperature, and other relevant information.</p><br>
+        <a href="#">Check Weather</a>
+    </div>
 </body>
 </html>
