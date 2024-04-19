@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('', include('password_generator.urls')),
+    path('weather/', include('weather.urls')),
 ]

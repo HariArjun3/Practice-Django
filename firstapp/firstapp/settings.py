@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'password_generator',
+    'weather',
 ]
 
 MIDDLEWARE = [
