@@ -25,3 +25,7 @@ def get_weather_view(request):
 
     context = {'weather_data': weather_data, 'form': form}
     return render(request, 'weather.html', context)
+
+
+def weather_info_view(request):
+    return render(request, 'weather_info.html')
