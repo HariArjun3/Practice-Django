@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('', include('password_generator.urls')),
     path('weather/', include('weather.urls')),
+    path('pdfextractor/', include('pdfextractor.urls'), name='pdfextractor'),
 ]

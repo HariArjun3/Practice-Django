@@ -27,6 +27,12 @@
 </head>
 <body>
     <h1>Weather Information</h1>
+    <form action="{% url 'clear_history' %}" method="post">
+    {% csrf_token %}  <button type="submit">Clear History</button>
+    </form>
+
+    <a href="{% url 'weather' %}">Go Back</a>
+
     {% for data in weather_data %}
         <div class="weather-card">
             <h2>{{ data.city }}</h2>

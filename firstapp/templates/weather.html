@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather App</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .div1{
+            width: 50%; /* Adjust as needed */
+            margin: 0 auto; /* This is the key to center the div horizontally */
+            text-align: center; /* Center align the content inside the div */
+            border: 1px solid black; /* Just for visualization */
+            padding: 20px; /* Optional: Add padding for better appearance */
+        }
+        a, button{
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 3px;
+            border: none;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+<div class="div1">
     <h2>Add a City</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Add City</button>
     </form>
-
-    <h2>Weather Information</h2>
-    {% for data in weather_data %}
-        <h3>{{ data.city }}</h3>
-        <p>Temperature: {{ data.temperature }}°C</p>
-        <p>Description: {{ data.description }}</p>
-        <img src="http://openweathermap.org/img/w/{{ data.icon }}.png" alt="Weather Icon">
-    {% endfor %}
+    <p></p>
+    <a href="{% url 'home' %}">Go Back</a>
+    <a href="{% url 'weather_info' %}">Weather Infos</a>
+</div>
 </body>
 </html>
