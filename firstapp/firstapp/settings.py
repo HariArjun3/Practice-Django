@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'password_generator',
     'weather',
+    'blogapp',
 ]
 
 MIDDLEWARE = [

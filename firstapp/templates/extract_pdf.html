@@ -6,5 +6,11 @@
 </head>
 <body>
     <h1>PDF FILE</h1>
+
+    <form action="{% url 'extract_pdf' %}" method="post" enctype="multipart/form-data">
+<!--        {% csrf_token %}-->
+        <input type="file" name="pdf_file">
+        <button type="submit">Extract Text</button>
+    </form>
 </body>
 </html>

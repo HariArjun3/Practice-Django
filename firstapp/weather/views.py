@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import weather, SearchHistory
+from .models import weather
 from .forms import CityForm
 from .utils import get_weather
 
@@ -32,15 +32,5 @@ def weather_info_view(request):
     return render(request, 'weather_info.html', {'generated_weather_data': generated_weather_data, 'weather_data': weather_data})
 
 
-def clear_history(request):
-    if request.method == 'POST':
-        if request.user.is_authenticated:  # Check if user is authenticated
-            user = request.user
-            SearchHistory.objects.filter(user=user).delete()
-            return redirect('/weather/')  # Redirect to weather page after clearing
-        else:
-            # Handle case where user is not logged in (optional: display message)
-            return redirect('/weather/')  # Or redirect to login page
-    else:
-        return redirect('/weather/')  # Handle non-POST requests (optional)
+
 

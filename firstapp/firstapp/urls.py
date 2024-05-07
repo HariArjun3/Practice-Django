@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('password_generator.urls')),
     path('weather/', include('weather.urls')),
     path('pdfextractor/', include('pdfextractor.urls'), name='pdfextractor'),
+    path('blogapp/', include('blogapp.urls'), name='blogapp'),
 ]

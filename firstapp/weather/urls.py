@@ -4,5 +4,4 @@ from . import views
 urlpatterns = [
     path('', views.get_weather_view, name='weather'),
     path('weather-info/', views.weather_info_view, name='weather_info'),
-    path('clear-history/', views.clear_history, name='clear_history'),
 ]
