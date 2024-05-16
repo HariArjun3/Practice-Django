@@ -25,7 +25,7 @@ def get_weather(city):
 
 
 # Example usage:
-weather_data = get_weather('London')
+# weather_data = get_weather('London')
 # if 'error' in weather_data:
 #     print(weather_data['error'])
 # else:
